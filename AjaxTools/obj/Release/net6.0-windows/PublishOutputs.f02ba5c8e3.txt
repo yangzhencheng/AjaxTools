@@ -1,0 +1,5 @@
+C:\Users\ztbx\source\repos\AjaxTools\AjaxTools\bin\Release\net6.0-windows\publish\AjaxTools.exe
+C:\Users\ztbx\source\repos\AjaxTools\AjaxTools\bin\Release\net6.0-windows\publish\AjaxTools.dll
+C:\Users\ztbx\source\repos\AjaxTools\AjaxTools\bin\Release\net6.0-windows\publish\AjaxTools.deps.json
+C:\Users\ztbx\source\repos\AjaxTools\AjaxTools\bin\Release\net6.0-windows\publish\AjaxTools.runtimeconfig.json
+C:\Users\ztbx\source\repos\AjaxTools\AjaxTools\bin\Release\net6.0-windows\publish\AjaxTools.pdb
