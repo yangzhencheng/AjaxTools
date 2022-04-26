@@ -140,8 +140,8 @@ namespace AjaxTools.WebServer
 
 
 
-        private string url;
-        private string data;
+        private string url = "";
+        private string data = "";
         private string method = "POST";
 
         protected int _timeOut = 0;
@@ -165,7 +165,7 @@ namespace AjaxTools.WebServer
             bool _r = false;
 
             //生成文件流
-            byte[] _buffer = Encoding.UTF8.GetBytes(data);
+            byte[] _buffer = Encoding.UTF8.GetBytes(data ?? "");
 
 
             //根据url创建请求对象
@@ -196,9 +196,12 @@ namespace AjaxTools.WebServer
             // 正式推送
             try
             {
-                Stream sm = _request.GetRequestStream();
-                sm.Write(_buffer, 0, _buffer.Length);
-                sm.Close();
+                if (0 < _buffer.Length)
+                {
+                    Stream sm = _request.GetRequestStream();
+                    sm.Write(_buffer, 0, _buffer.Length);
+                    sm.Close();
+                }
 
                 HttpWebResponse _response = (HttpWebResponse)_request.GetResponse();
                 using (StreamReader sr = new StreamReader(_response.GetResponseStream()))
